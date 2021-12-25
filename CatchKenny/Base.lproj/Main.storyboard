@@ -1,24 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CatchKenny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="Tna-fa-c5H">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rc-YJ-4yR">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmb-kx-wW3">
+                                        <rect key="frame" x="0.0" y="47.5" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6il-La-4zg" userLabel="Kenny View">
+                                        <rect key="frame" x="0.0" y="95" width="414" height="675.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kenny" translatesAutoresizingMaskIntoConstraints="NO" id="ydx-aa-VXb">
+                                                <rect key="frame" x="20" y="20" width="112" height="94"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HighestScore: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKQ-wU-gzP">
+                                        <rect key="frame" x="0.0" y="797.5" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kmb-kx-wW3" firstAttribute="leading" secondItem="Tna-fa-c5H" secondAttribute="leading" id="4So-6i-HJw"/>
+                                    <constraint firstItem="JKQ-wU-gzP" firstAttribute="leading" secondItem="Tna-fa-c5H" secondAttribute="leading" id="8bg-91-Mek"/>
+                                    <constraint firstAttribute="trailing" secondItem="6rc-YJ-4yR" secondAttribute="trailing" id="A3D-st-dhN"/>
+                                    <constraint firstItem="6il-La-4zg" firstAttribute="leading" secondItem="Tna-fa-c5H" secondAttribute="leading" id="EUh-3S-AHH"/>
+                                    <constraint firstAttribute="trailing" secondItem="6il-La-4zg" secondAttribute="trailing" id="Fsb-lH-Zx7"/>
+                                    <constraint firstItem="6rc-YJ-4yR" firstAttribute="top" secondItem="Tna-fa-c5H" secondAttribute="top" id="LGw-Rt-laM"/>
+                                    <constraint firstAttribute="trailing" secondItem="JKQ-wU-gzP" secondAttribute="trailing" id="LJs-J7-SoK"/>
+                                    <constraint firstItem="6rc-YJ-4yR" firstAttribute="leading" secondItem="Tna-fa-c5H" secondAttribute="leading" id="Wqz-Rg-nmr"/>
+                                    <constraint firstAttribute="trailing" secondItem="kmb-kx-wW3" secondAttribute="trailing" id="Z9z-3q-S0b"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tna-fa-c5H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NPN-p8-a0F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tna-fa-c5H" secondAttribute="trailing" id="PaO-96-FBW"/>
+                            <constraint firstItem="Tna-fa-c5H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nGJ-8D-3yD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tna-fa-c5H" secondAttribute="bottom" id="sCu-Ud-LPA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="HiggestScoreLabel" destination="JKQ-wU-gzP" id="mxh-ho-Jma"/>
+                        <outlet property="kennyImageView" destination="ydx-aa-VXb" id="WdE-Fz-iEH"/>
+                        <outlet property="kennyView" destination="6il-La-4zg" id="YaO-BG-ACg"/>
+                        <outlet property="scoreLabel" destination="kmb-kx-wW3" id="sJ0-td-r9X"/>
+                        <outlet property="timeLabel" destination="6rc-YJ-4yR" id="m2G-Tv-y7Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="63.616071428571423"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kenny" width="667" height="903"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
